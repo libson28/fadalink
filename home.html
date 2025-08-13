@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FADA-LINK - Votre Espace Numérique Hybride</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#57B5E7',
+                        secondary: '#8DD3C7'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="text-2xl font-['Pacifico'] text-primary"><a href="./home.html">FADA-LINK</a></div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="./cyber.html" class="text-gray-700 hover:text-primary transition-colors">Cybercafé</a>
+                        <a href="./coworking.html" class="text-gray-700 hover:text-primary transition-colors">Coworking</a>
+                        <a href="./gaming.html" class="text-gray-700 hover:text-primary transition-colors">Gaming</a>
+                        <a href="./formation.html" class="text-gray-700 hover:text-primary transition-colors">Formation</a>
+                        <a href="./resto.html" class="text-gray-700 hover:text-primary transition-colors">Restauration</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative hidden md:block">
+                        <div class="w-5 h-5 flex items-center justify-center absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <i class="ri-search-line"></i>
+                        </div>
+                        <input type="text" placeholder="Rechercher..." class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <button class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">
+                        Se connecter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-screen flex items-center justify-center overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20digital%20workspace%20with%20young%20people%20working%20on%20computers%2C%20gaming%20setups%2C%20and%20collaborative%20spaces%2C%20bright%20natural%20lighting%2C%20contemporary%20interior%20design%20with%20blue%20and%20teal%20accents%2C%20open%20floor%20plan%20with%20different%20zones%20for%20work%20and%20entertainment%2C%20professional%20photography%20style%2C%20high-tech%20atmosphere%2C%20vibrant%20and%20energetic%20environment&width=1920&height=1080&seq=hero001&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="text-center text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Votre Espace Numérique <span class="text-primary">Hybride</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                        Cybercafé, Coworking, Gaming, Formation et Restauration réunis en un seul lieu connecté et convivial
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <button class="bg-primary text-white px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Réserver un Espace
+                        </button>
+                        <button class="bg-white bg-opacity-20 backdrop-blur-sm text-white border border-white border-opacity-30 px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-30 transition-colors">
+                            Découvrir nos Services
+                        </button>
+                    </div>
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4">
+                            <div class="w-8 h-8 flex items-center justify-center mx-auto mb-2 text-primary">
+                                <i class="ri-wifi-line ri-lg"></i>
+                            </div>
+                            <div class="text-sm font-semibold">Connexion Haut Débit</div>
+                        </div>
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4">
+                            <div class="w-8 h-8 flex items-center justify-center mx-auto mb-2 text-primary">
+                                <i class="ri-time-line ri-lg"></i>
+                            </div>
+                            <div class="text-sm font-semibold">Ouvert 24h/24</div>
+                        </div>
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4">
+                            <div class="w-8 h-8 flex items-center justify-center mx-auto mb-2 text-primary">
+                                <i class="ri-group-line ri-lg"></i>
+                            </div>
+                            <div class="text-sm font-semibold">Communauté Active</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Nos Espaces</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Découvrez nos cinq espaces complémentaires conçus pour répondre à tous vos besoins numériques et professionnels
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20cybercafe%20interior%20with%20high-end%20computers%2C%20gaming%20chairs%2C%20LED%20lighting%2C%20clean%20white%20and%20blue%20color%20scheme%2C%20professional%20setup%20with%20multiple%20monitors%2C%20contemporary%20design%2C%20bright%20atmosphere%2C%20technology%20focused%20environment&width=400&height=300&seq=cyber001&orientation=landscape');"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                                    <i class="ri-computer-line ri-lg"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Cybercafé</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Ordinateurs performants, connexion fibre haut débit, services d'impression et tarification flexible
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-semibold">À partir de 500 FCFA/h</span>
+                                <div class="flex items-center text-green-600 text-sm">
+                                    <div class="w-2 h-2 bg-green-600 rounded-full mr-2"></div>
+                                    12 postes disponibles
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20coworking%20space%20with%20open%20desks%2C%20private%20offices%2C%20meeting%20rooms%2C%20natural%20lighting%2C%20plants%2C%20contemporary%20furniture%2C%20collaborative%20atmosphere%2C%20professional%20environment%20with%20teal%20and%20blue%20accents&width=400&height=300&seq=cowork001&orientation=landscape');"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                                    <i class="ri-briefcase-line ri-lg"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Coworking</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Espaces ouverts, bureaux privés, salles de réunion réservables via notre app mobile
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-semibold">À partir de 2000 FCFA/jour</span>
+                                <div class="flex items-center text-green-600 text-sm">
+                                    <div class="w-2 h-2 bg-green-600 rounded-full mr-2"></div>
+                                    8 espaces libres
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Gaming%20and%20esports%20area%20with%20high-end%20gaming%20PCs%2C%20RGB%20lighting%2C%20gaming%20chairs%2C%20multiple%20monitors%2C%20console%20gaming%20stations%2C%20streaming%20setup%2C%20modern%20gaming%20environment%20with%20blue%20and%20teal%20lighting&width=400&height=300&seq=gaming001&orientation=landscape');"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                                    <i class="ri-gamepad-line ri-lg"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Gaming & E-sport</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                PC gaming, consoles dernière génération, tournois réguliers et espace streaming
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-semibold">À partir de 800 FCFA/h</span>
+                                <div class="flex items-center text-orange-600 text-sm">
+                                    <div class="w-2 h-2 bg-orange-600 rounded-full mr-2"></div>
+                                    Tournoi ce soir
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Digital%20training%20classroom%20with%20computers%2C%20projector%2C%20whiteboard%2C%20students%20learning%20web%20development%20and%20graphic%20design%2C%20modern%20educational%20environment%2C%20bright%20lighting%2C%20professional%20atmosphere&width=400&height=300&seq=training001&orientation=landscape');"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                                    <i class="ri-graduation-cap-line ri-lg"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Formation Numérique</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Cours pratiques en bureautique, développement web, design graphique et soft skills
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-semibold">À partir de 15000 FCFA/mois</span>
+                                <div class="flex items-center text-blue-600 text-sm">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                                    5 cours cette semaine
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20cafe%20and%20restaurant%20area%20with%20local%20African%20dishes%2C%20fresh%20juices%2C%20snacks%2C%20contemporary%20interior%20design%2C%20comfortable%20seating%2C%20clean%20and%20bright%20atmosphere%2C%20food%20service%20counter&width=400&height=300&seq=resto001&orientation=landscape');"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                                    <i class="ri-restaurant-line ri-lg"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Restauration</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Plats locaux, snacks, jus naturels et boissons énergisantes commandables via l'app
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-semibold">Menu du jour 1500 FCFA</span>
+                                <div class="flex items-center text-green-600 text-sm">
+                                    <div class="w-2 h-2 bg-green-600 rounded-full mr-2"></div>
+                                    Ouvert maintenant
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-primary to-secondary rounded-xl shadow-lg p-6 text-white flex flex-col justify-center">
+                        <div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-white bg-opacity-20 rounded-lg">
+                            <i class="ri-smartphone-line ri-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-3">Application Mobile</h3>
+                        <p class="text-center text-white text-opacity-90 mb-6">
+                            Réservez vos espaces, commandez votre repas et suivez vos formations depuis votre mobile
+                        </p>
+                        <button class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors mx-auto">
+                            Télécharger l'App
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Événements à Venir</h2>
+                    <p class="text-xl text-gray-600">
+                        Participez à nos événements, formations et tournois
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary bg-opacity-10 rounded-lg p-3 mr-4">
+                                <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                    <i class="ri-trophy-line ri-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Tournoi FIFA 2024</h3>
+                                <p class="text-sm text-gray-600">Samedi 20 Janvier, 14h00</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Grand tournoi FIFA avec des prix exceptionnels. Inscription : 2000 FCFA
+                        </p>
+                        <button class="text-primary font-semibold hover:underline">
+                            S'inscrire →
+                        </button>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-secondary bg-opacity-10 rounded-lg p-3 mr-4">
+                                <div class="w-6 h-6 flex items-center justify-center text-secondary">
+                                    <i class="ri-code-line ri-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Formation React JS</h3>
+                                <p class="text-sm text-gray-600">Lundi 22 Janvier, 9h00</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Apprenez les bases du développement React avec un formateur expert
+                        </p>
+                        <button class="text-primary font-semibold hover:underline">
+                            Réserver →
+                        </button>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-100 rounded-lg p-3 mr-4">
+                                <div class="w-6 h-6 flex items-center justify-center text-orange-600">
+                                    <i class="ri-group-line ri-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Networking Evening</h3>
+                                <p class="text-sm text-gray-600">Vendredi 26 Janvier, 18h00</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Rencontrez d'autres entrepreneurs et freelances autour d'un verre
+                        </p>
+                        <button class="text-primary font-semibold hover:underline">
+                            Participer →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                            Pourquoi Choisir FADA-LINK ?
+                        </h2>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Un lieu unique qui combine tous vos besoins numériques et professionnels en un seul endroit
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center mr-4 bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-wifi-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-2">Connexion Ultra Rapide</h3>
+                                    <p class="text-gray-600">Fibre optique et Starlink pour une connexion stable et rapide</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center mr-4 bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-time-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-2">Flexibilité Totale</h3>
+                                    <p class="text-gray-600">Tarification à l'heure, au jour ou au mois selon vos besoins</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center mr-4 bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-shield-check-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-2">Environnement Sécurisé</h3>
+                                    <p class="text-gray-600">Accès contrôlé et surveillance 24h/24 pour votre sécurité</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center mr-4 bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-community-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-2">Communauté Active</h3>
+                                    <p class="text-gray-600">Rejoignez une communauté de jeunes entrepreneurs et créatifs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="h-96 bg-cover bg-center rounded-xl" style="background-image: url('https://readdy.ai/api/search-image?query=Young%20African%20professionals%20and%20students%20working%20together%20in%20a%20modern%20digital%20space%2C%20collaborative%20atmosphere%2C%20diverse%20group%20using%20computers%20and%20technology%2C%20bright%20contemporary%20interior%2C%20networking%20and%20community%20spirit&width=600&height=400&seq=community001&orientation=landscape');"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Informations Pratiques</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-primary bg-opacity-10 rounded-xl">
+                            <i class="ri-time-line ri-2x text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Horaires</h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p>Lundi - Vendredi : 7h00 - 23h00</p>
+                            <p>Samedi - Dimanche : 8h00 - 22h00</p>
+                            <p class="text-primary font-semibold">Gaming 24h/24</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-primary bg-opacity-10 rounded-xl">
+                            <i class="ri-map-pin-line ri-2x text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Localisation</h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p>123 Avenue de l'Innovation</p>
+                            <p>Plateau, Abidjan</p>
+                            <p>Côte d'Ivoire</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-primary bg-opacity-10 rounded-xl">
+                            <i class="ri-phone-line ri-2x text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Contact</h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p>+225 07 08 09 10 11</p>
+                            <p>contact@fada-link.ci</p>
+                            <p>WhatsApp : +225 07 08 09 10 11</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    Prêt à Rejoindre FADA-LINK ?
+                </h2>
+                <p class="text-xl text-white text-opacity-90 mb-8">
+                    Inscrivez-vous dès maintenant et bénéficiez de 50% de réduction sur votre première semaine
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="bg-white text-primary px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-90 transition-colors">
+                        S'inscrire Maintenant
+                    </button>
+                    <button class="bg-white bg-opacity-20 backdrop-blur-sm text-white border border-white border-opacity-30 px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-30 transition-colors">
+                        Visiter le Lieu
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-['Pacifico'] text-primary mb-4">FADA-LINK</div>
+                    <p class="text-gray-400 mb-6">
+                        Votre espace numérique hybride pour travailler, apprendre et vous divertir
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-facebook-fill"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-twitter-fill"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-instagram-fill"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-linkedin-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Cybercafé</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Coworking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gaming & E-sport</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Formation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Restauration</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tarifs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Réservation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Application Mobile</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Restez informé de nos événements et nouveautés
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-colors">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-send-plane-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 FADA-LINK. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Mentions Légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Politique de Confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="navigation-mobile">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.createElement('button');
+            mobileMenuButton.className = 'md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors';
+            mobileMenuButton.innerHTML = '<div class="w-6 h-6 flex items-center justify-center"><i class="ri-menu-line"></i></div>';
+            
+            const headerNav = document.querySelector('header nav');
+            const headerActions = document.querySelector('header .flex.items-center.space-x-4');
+            
+            if (headerActions && headerNav) {
+                headerActions.insertBefore(mobileMenuButton, headerActions.firstChild);
+                
+                mobileMenuButton.addEventListener('click', function() {
+                    headerNav.classList.toggle('hidden');
+                    headerNav.classList.toggle('absolute');
+                    headerNav.classList.toggle('top-16');
+                    headerNav.classList.toggle('left-0');
+                    headerNav.classList.toggle('right-0');
+                    headerNav.classList.toggle('bg-white');
+                    headerNav.classList.toggle('shadow-lg');
+                    headerNav.classList.toggle('p-4');
+                    headerNav.classList.toggle('flex-col');
+                    headerNav.classList.toggle('space-x-0');
+                    headerNav.classList.toggle('space-y-2');
+                });
+            }
+        });
+    </script>
+
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="availability-updates">
+        document.addEventListener('DOMContentLoaded', function() {
+            const availabilityElements = document.querySelectorAll('.text-green-600, .text-orange-600, .text-blue-600');
+            
+            function updateAvailability() {
+                availabilityElements.forEach(element => {
+                    if (Math.random() > 0.8) {
+                        const currentText = element.textContent;
+                        if (currentText.includes('disponibles')) {
+                            const newCount = Math.floor(Math.random() * 15) + 1;
+                            element.innerHTML = `<div class="w-2 h-2 bg-green-600 rounded-full mr-2"></div>${newCount} postes disponibles`;
+                        }
+                    }
+                });
+            }
+            
+            setInterval(updateAvailability, 30000);
+        });
+    </script>
+
+<script src="https://static.readdy.ai/static/share.js"></script></body>
+</html>

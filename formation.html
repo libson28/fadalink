@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FADA-LINK - Formation Numérique</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#57B5E7',
+                        secondary: '#8DD3C7'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="text-2xl font-['Pacifico'] text-primary"><a href="./home.html">FADA-LINK</a></div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="./cyber.html" class="text-gray-700 hover:text-primary transition-colors">Cybercafé</a>
+                        <a href="./coworking.html" class="text-gray-700 hover:text-primary transition-colors">Coworking</a>
+                        <a href="./gaming.html" class="text-gray-700 hover:text-primary transition-colors">Gaming</a>
+                        <a href="./formation.html" class="text-gray-700 hover:text-primary transition-colors" style="color: rgb(0, 140, 255);">Formation</a>
+                        <a href="./resto.html" class="text-gray-700 hover:text-primary transition-colors">Restauration</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative hidden md:block">
+                        <div
+                            class="w-5 h-5 flex items-center justify-center absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <i class="ri-search-line"></i>
+                        </div>
+                        <input type="text" placeholder="Rechercher..."
+                            class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <button
+                        class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">
+                        Se connecter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="relative h-[100vh] flex items-center justify-center overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20digital%20training%20center%20with%20students%20learning%20programming%20and%20digital%20skills%2C%20bright%20and%20professional%20classroom%20environment%20with%20multiple%20computer%20workstations%2C%20interactive%20displays%2C%20collaborative%20learning%20spaces%2C%20clean%20and%20contemporary%20design%20with%20blue%20accents%2C%20natural%20lighting&width=1920&height=1080&seq=formation001&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="text-center text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Formation Numérique <span class="text-primary">FADA-LINK</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                        Développez vos compétences numériques avec nos formations pratiques et certifiantes
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <button
+                            class="bg-primary text-white px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Découvrir nos Formations
+                        </button>
+                        <button
+                            class="bg-white bg-opacity-20 backdrop-blur-sm text-white border border-white border-opacity-30 px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-30 transition-colors">
+                            Programme Gratuit d'Essai
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-xl p-6 text-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-primary bg-opacity-10 rounded-xl">
+                            <i class="ri-code-line ri-2x text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Développement Web</h3>
+                        <p class="text-gray-600">
+                            HTML, CSS, JavaScript<br>
+                            React, Vue.js, Node.js<br>
+                            Projets Pratiques
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 text-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-primary bg-opacity-10 rounded-xl">
+                            <i class="ri-palette-line ri-2x text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Design Graphique</h3>
+                        <p class="text-gray-600">
+                            Photoshop, Illustrator<br>
+                            UI/UX Design<br>
+                            Motion Design
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 text-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-primary bg-opacity-10 rounded-xl">
+                            <i class="ri-computer-line ri-2x text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Bureautique Pro</h3>
+                        <p class="text-gray-600">
+                            Suite Office Avancée<br>
+                            Gestion de Projet<br>
+                            Outils Collaboratifs
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Nos Programmes de Formation</h2>
+                    <p class="text-xl text-gray-600">Des parcours adaptés à tous les niveaux et objectifs professionnels
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900">Initiation</h3>
+                            <div class="mt-4">
+                                <span class="text-4xl font-bold text-primary">25000</span>
+                                <span class="text-gray-600"> FCFA/mois</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">2 cours par semaine</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Support de cours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Exercices pratiques</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Certificat de formation</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full bg-primary text-white py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+                            S'inscrire
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span
+                                class="bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">Populaire</span>
+                        </div>
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900">Professionnel</h3>
+                            <div class="mt-4">
+                                <span class="text-4xl font-bold text-primary">45000</span>
+                                <span class="text-gray-600"> FCFA/mois</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">4 cours par semaine</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Projets pratiques</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Mentorat personnalisé</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Accès ressources premium</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Certification avancée</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full bg-primary text-white py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+                            S'inscrire
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900">Expert</h3>
+                            <div class="mt-4">
+                                <span class="text-4xl font-bold text-primary">75000</span>
+                                <span class="text-gray-600"> FCFA/mois</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Formation intensive</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Coaching individuel</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Projets professionnels</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Stage pratique</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="text-gray-600">Certification internationale</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full bg-primary text-white py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+                            S'inscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    Prêt à Développer vos Compétences ?
+                </h2>
+                <p class="text-xl text-white text-opacity-90 mb-8">
+                    Inscrivez-vous maintenant et bénéficiez d'une séance d'orientation gratuite avec nos formateurs
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button
+                        class="bg-white text-primary px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-90 transition-colors">
+                        Commencer Ma Formation
+                    </button>
+                    <button
+                        class="bg-white bg-opacity-20 backdrop-blur-sm text-white border border-white border-opacity-30 px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-30 transition-colors">
+                        Télécharger la Brochure
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-['Pacifico'] text-primary mb-4">FADA-LINK</div>
+                    <p class="text-gray-400 mb-6">
+                        Votre espace numérique hybride pour travailler, apprendre et vous divertir
+                    </p>
+                    <div class="flex space-x-4">
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-facebook-fill"></i>
+                        </div>
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-twitter-fill"></i>
+                        </div>
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-instagram-fill"></i>
+                        </div>
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-linkedin-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Cybercafé</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Coworking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gaming & E-sport</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Formation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Restauration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tarifs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Réservation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Application Mobile</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Restez informé de nos événements et nouveautés
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email"
+                            class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-colors">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-send-plane-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 FADA-LINK. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Mentions Légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Politique de
+                        Confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script id="navigation-mobile">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.createElement('button');
+            mobileMenuButton.className = 'md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors';
+            mobileMenuButton.innerHTML = '<div class="w-6 h-6 flex items-center justify-center"><i class="ri-menu-line"></i></div>';
+            const headerNav = document.querySelector('header nav');
+            const headerActions = document.querySelector('header .flex.items-center.space-x-4');
+            if (headerActions && headerNav) {
+                headerActions.insertBefore(mobileMenuButton, headerActions.firstChild);
+                mobileMenuButton.addEventListener('click', function () {
+                    headerNav.classList.toggle('hidden');
+                    headerNav.classList.toggle('absolute');
+                    headerNav.classList.toggle('top-16');
+                    headerNav.classList.toggle('left-0');
+                    headerNav.classList.toggle('right-0');
+                    headerNav.classList.toggle('bg-white');
+                    headerNav.classList.toggle('shadow-lg');
+                    headerNav.classList.toggle('p-4');
+                    headerNav.classList.toggle('flex-col');
+                    headerNav.classList.toggle('space-x-0');
+                    headerNav.classList.toggle('space-y-2');
+                });
+            }
+        });
+    </script>
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="availability-updates">
+        document.addEventListener('DOMContentLoaded', function () {
+            const computerStations = document.querySelectorAll('.grid.grid-cols-2.md\\:grid-cols-4.lg\\:grid-cols-6 > div');
+            function updateAvailability() {
+                computerStations.forEach(station => {
+                    if (Math.random() > 0.7) {
+                        const icon = station.querySelector('div.w-8');
+                        const status = station.querySelector('p.text-xs');
+                        if (Math.random() > 0.5) {
+                            icon.className = 'w-8 h-8 flex items-center justify-center mx-auto mb-2 bg-green-100 rounded-full';
+                            icon.querySelector('i').className = 'ri-computer-line text-green-600';
+                            status.className = 'text-xs text-green-600';
+                            status.textContent = 'Disponible';
+                        } else {
+                            icon.className = 'w-8 h-8 flex items-center justify-center mx-auto mb-2 bg-red-100 rounded-full';
+                            icon.querySelector('i').className = 'ri-computer-line text-red-600';
+                            status.className = 'text-xs text-red-600';
+                            status.textContent = 'Occupé';
+                        }
+                    }
+                });
+            }
+            setInterval(updateAvailability, 5000);
+        });
+    </script>
+    <script id="reservation-modal">
+        document.addEventListener('DOMContentLoaded', function () {
+            const reservationButtons = document.querySelectorAll('button');
+            reservationButtons.forEach(button => {
+                if (button.textContent.includes('Réserver') || button.textContent.includes('Choisir')) {
+                    button.addEventListener('click', function () {
+                        const modal = document.createElement('div');
+                        modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                        modal.innerHTML = `
+<div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-bold text-gray-900">Réservation</h3>
+<button class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+<input type="date" class="w-full px-4 py-2 border border-gray-200 rounded-lg">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Heure de début</label>
+<input type="time" class="w-full px-4 py-2 border border-gray-200 rounded-lg">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Durée</label>
+<select class="w-full px-4 py-2 border border-gray-200 rounded-lg">
+<option>1 heure</option>
+<option>2 heures</option>
+<option>4 heures</option>
+<option>Journée complète</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Type de poste</label>
+<select class="w-full px-4 py-2 border border-gray-200 rounded-lg">
+<option>Standard</option>
+<option>Premium</option>
+</select>
+</div>
+<button type="submit" class="w-full bg-primary text-white py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+Confirmer la réservation
+</button>
+</form>
+</div>
+`;
+                        document.body.appendChild(modal);
+                        modal.querySelector('button[class="text-gray-500 hover:text-gray-700"]').addEventListener('click', function () {
+                            modal.remove();
+                        });
+                        modal.addEventListener('click', function (e) {
+                            if (e.target === modal) {
+                                modal.remove();
+                            }
+                        });
+                        modal.querySelector('form').addEventListener('submit', function (e) {
+                            e.preventDefault();
+                            modal.innerHTML = `
+<div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-green-100 rounded-full">
+<i class="ri-check-line ri-2x text-green-600"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Réservation Confirmée</h3>
+<p class="text-gray-600 mb-6">Votre réservation a été enregistrée avec succès</p>
+<button class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+Fermer
+</button>
+</div>
+</div>
+`;
+                            modal.querySelector('button').addEventListener('click', function () {
+                                modal.remove();
+                            });
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script src="https://static.readdy.ai/static/share.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <div class="bg-gray-50 text-gray-800">
+
+  <div class="max-w-7xl mx-auto py-10 px-4">
+   
+    <h1 class="text-3xl font-bold mb-8 text-center">Nos Formations</h1>
+
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      
+      
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Formation Web" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">Développement Web</h2>
+          <p class="text-gray-600 mb-4">Créez des sites modernes avec HTML, CSS, JavaScript et plus encore.</p>
+          <span class="inline-block bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Durée : 3 mois</span>
+        </div>
+      </div>
+
+     
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden">
+        <img src="https://cdn.pixabay.com/photo/2015/05/31/12/14/mobile-791164_1280.jpg" alt="Formation Mobile" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">Développement Mobile</h2>
+          <p class="text-gray-600 mb-4">Apprenez à créer des applications mobiles avec React Native et Flutter.</p>
+          <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full">Durée : 4 mois</span>
+        </div>
+      </div>
+
+      
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden">
+        <img src="https://cdn.pixabay.com/photo/2018/08/08/23/48/web-3593920_1280.jpg" alt="Formation UI/UX" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">UI/UX Design</h2>
+          <p class="text-gray-600 mb-4">Maîtrisez Figma, l’ergonomie et la création d’interfaces attrayantes.</p>
+          <span class="inline-block bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full">Durée : 2 mois</span>
+        </div>
+      </div>
+
+   
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden">
+        <img src="https://cdn.pixabay.com/photo/2019/06/17/19/48/data-4280416_1280.jpg" alt="Formation Data" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">Data Science</h2>
+          <p class="text-gray-600 mb-4">Analyse de données, Python, et outils de machine learning.</p>
+          <span class="inline-block bg-yellow-100 text-yellow-700 text-sm px-3 py-1 rounded-full">Durée : 5 mois</span>
+        </div>
+      </div>
+
+     
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden">
+        <img src="https://cdn.pixabay.com/photo/2022/06/15/16/16/cybersecurity-7264635_1280.jpg" alt="Formation Cybersécurité" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h2 class="text-xl font-semibold mb-2">Cybersécurité</h2>
+          <p class="text-gray-600 mb-4">Protégez les systèmes et réseaux contre les menaces numériques.</p>
+          <span class="inline-block bg-red-100 text-red-700 text-sm px-3 py-1 rounded-full">Durée : 6 mois</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div> -->

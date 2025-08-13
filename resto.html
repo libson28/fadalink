@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FADA-LINK - Restauration</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#57B5E7',
+                        secondary: '#8DD3C7'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .button-custom {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px); 
+    color: white; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1.5rem 2rem; 
+    border-radius: 10px; 
+    white-space: nowrap;
+    font-size: 1.125rem;
+    font-weight: 600; 
+    transition: background-color 0.3s ease; 
+}
+
+.button-custom:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="text-2xl font-['Pacifico'] text-primary"><a href="./home.html">FADA-LINK</a></div>
+                  <nav class="hidden md:flex space-x-6">
+                        <a href="./cyber.html" class="text-gray-700 hover:text-primary transition-colors">Cybercafé</a>
+                        <a href="./coworking.html" class="text-gray-700 hover:text-primary transition-colors">Coworking</a>
+                        <a href="./gaming.html" class="text-gray-700 hover:text-primary transition-colors">Gaming</a>
+                        <a href="./formation.html" class="text-gray-700 hover:text-primary transition-colors">Formation</a>
+                        <a href="./resto.html" class="text-gray-700 hover:text-primary transition-colors" style="color: rgb(0, 140, 255);">Restauration</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative hidden md:block">
+                        <div
+                            class="w-5 h-5 flex items-center justify-center absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <i class="ri-search-line"></i>
+                        </div>
+                        <input type="text" placeholder="Rechercher..."
+                            class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <button
+                        class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">
+                        Se connecter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="relative h-[100vh] flex items-center justify-center overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20African%20restaurant%20interior%20with%20contemporary%20design%2C%20warm%20lighting%2C%20comfortable%20seating%2C%20open%20kitchen%20concept%2C%20fresh%20ingredients%20displayed%2C%20mix%20of%20traditional%20and%20modern%20elements%2C%20professional%20chefs%20preparing%20food%2C%20clean%20and%20inviting%20atmosphere%20with%20blue%20and%20natural%20wood%20accents&width=1920&height=1080&seq=resto001&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="text-center text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Savourez l'Excellence chez <span class="text-primary">FADA-LINK</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                        Une expérience culinaire unique alliant tradition africaine et cuisine moderne
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <button
+                            class="bg-primary text-white px-8 py-4 !rounded-button whitespace-nowrap text-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            Commander Maintenant
+                        </button>
+                        <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                           class="button-custom">
+                            Voir le Menu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Nos Spécialités</h2>
+                    <p class="text-xl text-gray-600">Découvrez notre sélection de plats préparés avec passion</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-64 bg-cover bg-center"
+                            style="background-image: url('https://readdy.ai/api/search-image?query=Traditional%20African%20rice%20dish%20with%20grilled%20chicken%2C%20colorful%20vegetables%2C%20professional%20plating%2C%20modern%20presentation%2C%20restaurant%20quality%2C%20vibrant%20colors%2C%20garnished%20beautifully&width=400&height=300&seq=food001&orientation=landscape');">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Plats Traditionnels</h3>
+                            <p class="text-gray-600 mb-4">
+                                Découvrez nos plats traditionnels africains revisités avec une touche moderne
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">À partir de 2500 FCFA</span>
+                                <button class="text-primary font-semibold hover:underline">Voir le menu →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-64 bg-cover bg-center"
+                            style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20fusion%20cuisine%20burger%20with%20African%20spices%2C%20fresh%20vegetables%2C%20gourmet%20presentation%2C%20artisanal%20bread%2C%20restaurant%20quality%2C%20vibrant%20colors%2C%20professional%20plating&width=400&height=300&seq=food002&orientation=landscape');">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Fast Food Gourmet</h3>
+                            <p class="text-gray-600 mb-4">
+                                Une sélection de burgers, sandwichs et snacks avec une touche africaine
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">À partir de 1500 FCFA</span>
+                                <button class="text-primary font-semibold hover:underline">Voir le menu →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="h-64 bg-cover bg-center"
+                            style="background-image: url('https://readdy.ai/api/search-image?query=Fresh%20tropical%20fruit%20smoothies%20and%20juices%2C%20colorful%20presentation%2C%20healthy%20drinks%2C%20garnished%20with%20mint%2C%20restaurant%20quality%2C%20vibrant%20colors%2C%20professional%20presentation&width=400&height=300&seq=food003&orientation=landscape');">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Boissons & Smoothies</h3>
+                            <p class="text-gray-600 mb-4">
+                                Jus naturels, smoothies et boissons énergisantes faits maison
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">À partir de 1000 FCFA</span>
+                                <button class="text-primary font-semibold hover:underline">Voir le menu →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">Menu du Jour</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Entrée</h3>
+                                    <p class="text-gray-600">Salade d'avocat aux crevettes</p>
+                                    <p class="text-sm text-gray-500">Avocat frais, crevettes marinées, légumes croquants
+                                    </p>
+                                </div>
+                                <span class="text-primary font-semibold">1500 FCFA</span>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Plat Principal</h3>
+                                    <p class="text-gray-600">Poulet Yassa</p>
+                                    <p class="text-sm text-gray-500">Servi avec riz parfumé et légumes sautés</p>
+                                </div>
+                                <span class="text-primary font-semibold">2500 FCFA</span>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dessert</h3>
+                                    <p class="text-gray-600">Gâteau à la banane plantain</p>
+                                    <p class="text-sm text-gray-500">Accompagné de crème anglaise à la vanille</p>
+                                </div>
+                                <span class="text-primary font-semibold">1000 FCFA</span>
+                            </div>
+
+                            <div class="mt-8">
+                                <button
+                                    class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+                                    Commander le Menu Complet - 4500 FCFA
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-96 bg-cover bg-center rounded-xl"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20chef%20preparing%20traditional%20African%20cuisine%20in%20modern%20kitchen%2C%20cooking%20with%20fresh%20ingredients%2C%20steam%20rising%2C%20dramatic%20lighting%2C%20restaurant%20quality%20presentation&width=600&height=400&seq=chef001&orientation=landscape');">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Services de Restauration</h2>
+                    <p class="text-xl text-gray-600">Des solutions adaptées à tous vos besoins</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="ri-store-2-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Sur Place</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Espace climatisé
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                WiFi gratuit
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Service à table
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="ri-takeaway-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">À Emporter</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Commande rapide
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Emballage écologique
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Points de fidélité
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-xl mb-6">
+                            <i class="ri-bike-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Livraison</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Livraison rapide
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Suivi en temps réel
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Paiement sécurisé
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Événements & Services Spéciaux</h2>
+                    <p class="text-xl text-gray-600">Des prestations sur mesure pour vos occasions</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Service Traiteur</h3>
+                        <p class="text-gray-600 mb-6">
+                            Organisation de buffets pour vos événements professionnels et personnels
+                        </p>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Menus personnalisés
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Service professionnel
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Équipement inclus
+                            </li>
+                        </ul>
+                        <button class="text-primary font-semibold hover:underline">
+                            Demander un devis →
+                        </button>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Ateliers Culinaires</h3>
+                        <p class="text-gray-600 mb-6">
+                            Apprenez à cuisiner avec nos chefs professionnels
+                        </p>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Cours hebdomadaires
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Ingrédients fournis
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-primary mr-2"></i>
+                                Certificat inclus
+                            </li>
+                        </ul>
+                        <button class="text-primary font-semibold hover:underline">
+                            S'inscrire aux ateliers →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center text-white">
+                    <h2 class="text-4xl font-bold mb-8">Téléchargez Notre Application</h2>
+                    <p class="text-xl mb-8">Commandez facilement, gagnez des points et profitez d'offres exclusives</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <button
+                            class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors flex items-center">
+                            <i class="ri-apple-fill ri-lg mr-2"></i>
+                            App Store
+                        </button>
+                        <button
+                            class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors flex items-center">
+                            <i class="ri-google-play-fill ri-lg mr-2"></i>
+                            Play Store
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="bg-gray-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="text-2xl font-['Pacifico'] text-primary mb-4">FADA-LINK</div>
+                        <p class="text-gray-400 mb-6">
+                            Votre espace numérique hybride pour travailler, apprendre et vous divertir
+                        </p>
+                        <div class="flex space-x-4">
+                            <div
+                                class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                                <i class="ri-facebook-fill"></i>
+                            </div>
+                            <div
+                                class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                                <i class="ri-twitter-fill"></i>
+                            </div>
+                            <div
+                                class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                                <i class="ri-instagram-fill"></i>
+                            </div>
+                            <div
+                                class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                                <i class="ri-linkedin-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition-colors">Cybercafé</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Coworking</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Gaming & E-sport</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Formation</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Restauration</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Support</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Tarifs</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Réservation</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Application Mobile</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                        <p class="text-gray-400 mb-4">
+                            Restez informé de nos événements et nouveautés
+                        </p>
+                        <div class="flex">
+                            <input type="email" placeholder="Votre email"
+                                class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <button class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-colors">
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="ri-send-plane-line"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 FADA-LINK. Tous droits réservés.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Mentions
+                            Légales</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Politique de
+                            Confidentialité</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">CGU</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script id="navigation-mobile">
+            document.addEventListener('DOMContentLoaded', function () {
+                const mobileMenuButton = document.createElement('button');
+                mobileMenuButton.className = 'md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors';
+                mobileMenuButton.innerHTML = '<div class="w-6 h-6 flex items-center justify-center"><i class="ri-menu-line"></i></div>';
+                const headerNav = document.querySelector('header nav');
+                const headerActions = document.querySelector('header .flex.items-center.space-x-4');
+                if (headerActions && headerNav) {
+                    headerActions.insertBefore(mobileMenuButton, headerActions.firstChild);
+                    mobileMenuButton.addEventListener('click', function () {
+                        headerNav.classList.toggle('hidden');
+                        headerNav.classList.toggle('absolute');
+                        headerNav.classList.toggle('top-16');
+                        headerNav.classList.toggle('left-0');
+                        headerNav.classList.toggle('right-0');
+                        headerNav.classList.toggle('bg-white');
+                        headerNav.classList.toggle('shadow-lg');
+                        headerNav.classList.toggle('p-4');
+                        headerNav.classList.toggle('flex-col');
+                        headerNav.classList.toggle('space-x-0');
+                        headerNav.classList.toggle('space-y-2');
+                    });
+                }
+            });
+        </script>
+        <script id="smooth-scroll">
+            document.addEventListener('DOMContentLoaded', function () {
+                const links = document.querySelectorAll('a[href^="#"]');
+                links.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+        <script id="availability-updates">
+            document.addEventListener('DOMContentLoaded', function () {
+                const computerStations = document.querySelectorAll('.grid.grid-cols-2.md\\:grid-cols-4.lg\\:grid-cols-6 > div');
+                function updateAvailability() {
+                    computerStations.forEach(station => {
+                        if (Math.random() > 0.7) {
+                            const icon = station.querySelector('div.w-8');
+                            const status = station.querySelector('p.text-xs');
+                            if (Math.random() > 0.5) {
+                                icon.className = 'w-8 h-8 flex items-center justify-center mx-auto mb-2 bg-green-100 rounded-full';
+                                icon.querySelector('i').className = 'ri-computer-line text-green-600';
+                                status.className = 'text-xs text-green-600';
+                                status.textContent = 'Disponible';
+                            } else {
+                                icon.className = 'w-8 h-8 flex items-center justify-center mx-auto mb-2 bg-red-100 rounded-full';
+                                icon.querySelector('i').className = 'ri-computer-line text-red-600';
+                                status.className = 'text-xs text-red-600';
+                                status.textContent = 'Occupé';
+                            }
+                        }
+                    });
+                }
+                setInterval(updateAvailability, 5000);
+            });
+        </script>
+        <script id="order-modal">
+            document.addEventListener('DOMContentLoaded', function () {
+                const orderButtons = document.querySelectorAll('button');
+                orderButtons.forEach(button => {
+                    if (button.textContent.includes('Commander') || button.textContent.includes('menu')) {
+                        button.addEventListener('click', function () {
+                            const modal = document.createElement('div');
+                            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                            modal.innerHTML = `
+<div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-bold text-gray-900">Commander</h3>
+<button class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Type de service</label>
+<select class="w-full px-4 py-2 border border-gray-200 rounded-lg">
+<option>Sur place</option>
+<option>À emporter</option>
+<option>Livraison</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Heure souhaitée</label>
+<input type="time" class="w-full px-4 py-2 border border-gray-200 rounded-lg">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Instructions spéciales</label>
+<textarea class="w-full px-4 py-2 border border-gray-200 rounded-lg" rows="3" maxlength="500" placeholder="Allergies, préférences..."></textarea>
+</div>
+<div class="flex gap-4">
+<button type="button" class="flex-1 bg-gray-200 text-gray-800 py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-gray-300 transition-colors">
+Annuler
+</button>
+<button type="submit" class="flex-1 bg-primary text-white py-3 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+Confirmer
+</button>
+</div>
+</form>
+</div>
+`;
+                            document.body.appendChild(modal);
+
+                            const closeModal = () => modal.remove();
+
+                            modal.querySelector('button[class="text-gray-500 hover:text-gray-700"]').addEventListener('click', closeModal);
+                            modal.querySelector('button[type="button"]').addEventListener('click', closeModal);
+                            modal.addEventListener('click', function (e) {
+                                if (e.target === modal) closeModal();
+                            });
+
+                            modal.querySelector('form').addEventListener('submit', function (e) {
+                                e.preventDefault();
+                                modal.innerHTML = `
+<div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-green-100 rounded-full">
+<i class="ri-check-line ri-2x text-green-600"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Commande Confirmée</h3>
+<p class="text-gray-600 mb-6">Votre commande a été enregistrée avec succès</p>
+<button class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap font-semibold hover:bg-opacity-90 transition-colors">
+Fermer
+</button>
+</div>
+</div>
+`;
+                                modal.querySelector('button').addEventListener('click', closeModal);
+                            });
+                        });
+                    }
+                });
+            });
+        </script>
+        <script src="https://static.readdy.ai/static/share.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--  -->
+        <section class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Notre Menu</h2>
+<p class="text-xl text-gray-600">Une cuisine africaine authentique avec une touche moderne</p>
+</div>
+<div class="flex justify-center space-x-4 mb-12">
+<button class="menu-tab bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap font-semibold" data-tab="entrees">Entrées</button>
+<button class="menu-tab bg-white text-gray-600 px-6 py-2 !rounded-button whitespace-nowrap font-semibold hover:bg-gray-50" data-tab="plats">Plats</button>
+<button class="menu-tab bg-white text-gray-600 px-6 py-2 !rounded-button whitespace-nowrap font-semibold hover:bg-gray-50" data-tab="desserts">Desserts</button>
+<button class="menu-tab bg-white text-gray-600 px-6 py-2 !rounded-button whitespace-nowrap font-semibold hover:bg-gray-50" data-tab="boissons">Boissons</button>
+</div>
+<div id="entrees" class="menu-content">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Salade d'Avocat aux Crevettes</h3>
+<p class="text-gray-600 mb-4">Avocat frais, crevettes marinées, oignons rouges, tomates cerises, vinaigrette aux agrumes</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 15 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1500 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Beignets de Poisson</h3>
+<p class="text-gray-600 mb-4">Poisson blanc croustillant, sauce piquante maison, citron vert</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 20 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">2000 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Alloco Premium</h3>
+<p class="text-gray-600 mb-4">Bananes plantains mûres, sauce tomate épicée, oignons caramélisés</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 15 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1200 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Soupe de Légumes Africains</h3>
+<p class="text-gray-600 mb-4">Mélange de légumes locaux, épices traditionnelles, croûtons de pain</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 25 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1800 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+<div id="plats" class="menu-content hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Poulet Yassa</h3>
+<p class="text-gray-600 mb-4">Poulet mariné, oignons confits, riz parfumé, sauce citron</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 30 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">3500 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Thiéboudienne Royal</h3>
+<p class="text-gray-600 mb-4">Riz au poisson, légumes assortis, sauce tomate, poisson fumé</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 35 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">4000 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Attieké Poisson Braisé</h3>
+<p class="text-gray-600 mb-4">Poisson frais braisé, attieké, légumes, sauce pimentée</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 25 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">3000 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Sauce Graine Premium</h3>
+<p class="text-gray-600 mb-4">Viande de bœuf, noix de palme, riz blanc, légumes</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 40 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">3800 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+<div id="desserts" class="menu-content hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Gâteau à la Banane Plantain</h3>
+<p class="text-gray-600 mb-4">Bananes plantains caramélisées, crème anglaise à la vanille</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 15 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1500 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Dégué au Lait de Coco</h3>
+<p class="text-gray-600 mb-4">Perles de couscous, lait de coco, fruits secs, miel</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 10 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1200 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Salade de Fruits Exotiques</h3>
+<p class="text-gray-600 mb-4">Mangue, papaye, ananas, fruit du dragon, sirop de menthe</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 12 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1800 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Beignets de Coco</h3>
+<p class="text-gray-600 mb-4">Noix de coco râpée, sauce caramel, glace vanille</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 15 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1400 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+<div id="boissons" class="menu-content hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Smoothie Tropical</h3>
+<p class="text-gray-600 mb-4">Mangue, ananas, fruit de la passion, yaourt nature</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 5 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1500 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Bissap Glacé</h3>
+<p class="text-gray-600 mb-4">Fleurs d'hibiscus, menthe fraîche, citron vert, gingembre</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 5 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1000 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Jus de Gingembre</h3>
+<p class="text-gray-600 mb-4">Gingembre frais, citron, miel, eau gazeuse</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 5 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">1200 FCFA</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Cocktail FADA-LINK</h3>
+<p class="text-gray-600 mb-4">Jus de fruits exotiques, sirop de menthe, citron vert</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-time-line mr-2"></i>
+<span>Préparation: 5 min</span>
+</div>
+</div>
+<span class="text-xl font-bold text-primary">2000 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Traditional%20African%20rice%20dish%20with%20grilled%20chicken%2C%20colorful%20vegetables%2C%20professional%20plating%2C%20modern%20presentation%2C%20restaurant%20quality%2C%20vibrant%20colors%2C%20garnished%20beautifully&width=400&height=300&seq=food001&orientation=landscape');"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Plats Traditionnels</h3>
+<p class="text-gray-600 mb-4">
+Découvrez nos plats traditionnels africains revisités avec une touche moderne
+</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-semibold">À partir de 2500 FCFA</span>
+<button class="text-primary font-semibold hover:underline">Voir le menu →</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20fusion%20cuisine%20burger%20with%20African%20spices%2C%20fresh%20vegetables%2C%20gourmet%20presentation%2C%20artisanal%20bread%2C%20restaurant%20quality%2C%20vibrant%20colors%2C%20professional%20plating&width=400&height=300&seq=food002&orientation=landscape');"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Fast Food Gourmet</h3>
+<p class="text-gray-600 mb-4">
+Une sélection de burgers, sandwichs et snacks avec une touche africaine
+</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-semibold">À partir de 1500 FCFA</span>
+<button class="text-primary font-semibold hover:underline">Voir le menu →</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Fresh%20tropical%20fruit%20smoothies%20and%20juices%2C%20colorful%20presentation%2C%20healthy%20drinks%2C%20garnished%20with%20mint%2C%20restaurant%20quality%2C%20vibrant%20colors%2C%20professional%20presentation&width=400&height=300&seq=food003&orientation=landscape');"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Boissons & Smoothies</h3>
+<p class="text-gray-600 mb-4">
+Jus naturels, smoothies et boissons énergisantes faits maison
+</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-semibold">À partir de 1000 FCFA</span>
+<button class="text-primary font-semibold hover:underline">Voir le menu →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+        <!--   -->
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script id="menu-tabs">
+document.addEventListener('DOMContentLoaded', function() {
+const menuTabs = document.querySelectorAll('.menu-tab');
+const menuContents = document.querySelectorAll('.menu-content');
+
+menuTabs.forEach(tab => {
+tab.addEventListener('click', () => {
+menuTabs.forEach(t => {
+t.classList.remove('bg-primary', 'text-white');
+t.classList.add('bg-white', 'text-gray-600');
+});
+tab.classList.remove('bg-white', 'text-gray-600');
+tab.classList.add('bg-primary', 'text-white');
+
+const targetId = tab.dataset.tab;
+menuContents.forEach(content => {
+content.classList.add('hidden');
+if (content.id === targetId) {
+content.classList.remove('hidden');
+}
+});
+});
+});
+});
+</script>
+</body>
+
+</html>
