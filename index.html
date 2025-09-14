@@ -462,29 +462,34 @@
 
     <footer class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
+
+            <!-- Grille responsive -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+                <!-- Logo + description -->
+                <div class="text-center md:text-left">
                     <div class="text-2xl font-['Pacifico'] text-primary mb-4">FADA-LINK</div>
                     <p class="text-gray-400 mb-6">
                         Votre espace numérique hybride pour travailler, apprendre et vous divertir
                     </p>
-                    <div class="flex space-x-4">
-                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <div class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
                             <i class="ri-facebook-fill"></i>
                         </div>
-                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                        <div class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
                             <i class="ri-twitter-fill"></i>
                         </div>
-                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                        <div class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
                             <i class="ri-instagram-fill"></i>
                         </div>
-                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                        <div class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
                             <i class="ri-linkedin-fill"></i>
                         </div>
                     </div>
                 </div>
 
-                <div>
+                <!-- Services -->
+                <div class="text-center md:text-left">
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#" class="hover:text-white transition-colors">Cybercafé</a></li>
@@ -495,7 +500,8 @@
                     </ul>
                 </div>
 
-                <div>
+                <!-- Support -->
+                <div class="text-center md:text-left">
                     <h3 class="text-lg font-semibold mb-4">Support</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
@@ -506,35 +512,34 @@
                     </ul>
                 </div>
 
-                <div>
+                <!-- Newsletter -->
+                <div class="text-center md:text-left">
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-                    <p class="text-gray-400 mb-4">
-                        Restez informé de nos événements et nouveautés
-                    </p>
-                    <div class="flex">
-                        <input type="email" placeholder="Votre email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                        <button class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-colors">
-                            <div class="w-5 h-5 flex items-center justify-center">
-                                <i class="ri-send-plane-line"></i>
-                            </div>
-                        </button>
-                    </div>
+                    <p class="text-gray-400 mb-4">Restez informé de nos événements et nouveautés</p>
+                    <form class="flex flex-col sm:flex-row items-center sm:items-stretch">
+                        <input type="email" placeholder="Votre email" class="flex-1 w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent mb-3 sm:mb-0">
+                        <button type="submit" class="bg-primary px-5 py-2 rounded-lg sm:rounded-r-lg sm:rounded-l-none hover:bg-opacity-90 transition-colors flex items-center justify-center">
+            <i class="ri-send-plane-line"></i>
+          </button>
+                    </form>
                 </div>
+
             </div>
 
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
+            <!-- Bas de page -->
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
                     © 2024 FADA-LINK. Tous droits réservés.
                 </p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
+                <div class="flex flex-wrap justify-center md:justify-end space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Mentions Légales</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Politique de
-                        Confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Politique de Confidentialité</a>
                     <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">CGU</a>
                 </div>
             </div>
         </div>
     </footer>
+
 
     <script id="navigation-mobile">
         document.addEventListener('DOMContentLoaded', function() {
